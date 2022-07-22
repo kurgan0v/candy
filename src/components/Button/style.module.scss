@@ -1,95 +1,24 @@
 @import "../../styles/variables.scss";
-.h1{
-  font-size: 30px;
-  color: $color-dark-blue;
+.button{
   font-weight: 900;
-}
-header{
-  background-color: $color-dark-blue;
-}
-.nav{
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-  align-items: center;
-}
-.wrapNav{
-  display: flex;
-  align-items: center;
-}
-.avatar{
-  width: 60px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.userInfo{
-  display: flex;
-  flex-direction: column;
-}
-.userName{
-  font-size: 25px;
-  font-weight: 700;
-  margin: 0;
-  color: #fff;
-}
-.userPosition{
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
-  color: #fff;
-}
-.logout{
   font-size: 20px;
-  padding: 5px 10px;
-  font-weight: 700;
-  background-color: $color-dark-blue;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  height: min-content;
-  transition: .3s;
-  cursor: pointer;
-}
-.logout:hover{
   color: $color-dark-blue;
-  background-color: #fff;
-}
-
-.navigate{
-  width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-.pages{
-  display: flex;
-}
-.link{
-  text-decoration: none;
-}
-.page{
-  font-size: 25px;
-  font-weight: 700;
-  color: $color-dark-blue;
+  background-color: $color-grey;
   border-radius: 5px;
-  width: 200px;
-  text-align: center;
-  padding: 10px 0;
-  margin-right: 10px;
-  transition: .3s;
-  border: 2px solid $color-dark-blue;
+  padding: 10px 20px;
+  border: none;
   cursor: pointer;
+  transition: .3s;
+  pointer-events: none;
+  margin: 5px;
 }
-.page:hover{
-  background-color: $color-light-orange;
-  border: 2px solid $color-orange;
+.button:hover{
+  background-color: $color-grey;
 }
-.pageActive{
-  border: 2px solid $color-orange;
+.active{
   background-color: $color-orange;
+  pointer-events: all;
 }
-.pageActive:hover{
+.active:hover{
   background-color: $color-dark-orange;
-  border: 2px solid $color-dark-orange;
 }

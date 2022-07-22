@@ -4,31 +4,111 @@
   margin: 0 auto;
   padding-bottom: 90px;
 }
-.info{
+.step{
+  display: flex;
+}
+.stepAction{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.headerStep{
   display: flex;
   align-items: center;
-  margin: 40px 0;
+  margin-top: 20px;
 }
-.total{
-  font-size: 25px;
-  font-weight: 700;
+.numberStep{
   margin: 0;
-  color: $color-dark-blue;
-  margin-left: 20px;
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 900;
+  color: $color-light-blue;
 }
-th{
+.nameStep{
+  margin: 0;
+  font-size: 25px;
+  margin-left: 20px;
+  font-weight: 900;
+  color: $color-dark-blue;
+}
+.addComponent{
+  display: flex;
+  align-items: flex-start;
+}
+.wrapButton{
+  margin-left: 10px;
+  margin-top: 40px;
+}
+.status{
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-dark-blue;
+  text-align: center;
+}
+.tip{
   font-size: 18px;
   font-weight: 500;
-  padding: 10px;
   color: $color-dark-blue;
+  border: 2px solid $color-dark-blue;
+  width: max-content;
+  padding: 7px 15px;
+  border-radius: 5px;
+  margin: 0;
 }
-th:last-of-type, td:last-of-type{
-  font-weight: 700;
-}
-td{
+.tip::before{
+  padding: 1px 11px;
+  border-radius: 20px;
   text-align: center;
-  padding: 10px;
-  color: $color-dark-blue;
+  background-color: $color-orange;
+  content: "!";
+  margin-right: 10px;
+}
+.stepAnimation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message{
+  color: $color-red;
+  margin: 0;
+  margin-top: 5px;
   font-size: 18px;
-  width: 140px;
+  font-weight: 300;
+  transition: .3s;
+}
+.actionsSyrup{
+  display: flex;
+  flex-direction: column;
+}
+.messageInfo{
+  color: $color-dark-blue;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+.solidWrap{
+  display: flex;
+  align-items: center;
+}
+.solidHeader{
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+  color: $color-dark-blue;
+}
+.solidsContent{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px 0;
+  line-height: 25px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 2px solid $color-dark-blue;
+  color: $color-dark-blue;
+}
+.btns{
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
 }

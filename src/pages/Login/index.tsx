@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import style from './style.module.scss';
-import {Table} from "../../components/Table";
-import {ISupply} from "../../App";
+import {Button} from "../../components/Button";
 
-interface ISupplies{
-    supplies: Array<ISupply> | undefined
+interface ILogin{
+    signIn: () => void
 }
-
-export const SuppliesPage = ({supplies}:ISupplies) => {
+export const Login = ({signIn}:ILogin) => {
     return(
-        <>
-            <Table supplies={supplies} page="supplies"/>
-        </>
+        <section className={style.main}>
+            <div className={style.login}>
+                <p className={style.loginHeader}>Войти с помощью Google</p>
+                <Button text={"Войти"} active={true} onClick={signIn}/>
+            </div>
+        </section>
     );
 }

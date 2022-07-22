@@ -1,64 +1,39 @@
 @import "../../styles/variables.scss";
-.select{
-  position: relative;
-  width: max-content;
-}
-.selected{
-  display: flex;
-  align-items: center;
+.input{
+  font-size: 20px;
   padding: 5px 10px;
   border: 2px solid $color-dark-blue;
   width: max-content;
+  color: $color-dark-blue;
   border-radius: 5px;
   background-color: #fff;
   z-index: 2;
+  width: 200px;
   cursor: pointer;
 }
-.selectedLabel{
-  font-size: 20px;
-  color: $color-dark-blue;
+.message{
+  color: $color-red;
   margin: 0;
-  font-weight: 500;
-}
-.selectedIcon{
-  width: 20px;
-  transition: .3s;
-  margin-left: 10px;
-}
-.selectedIconActive{
-  transform: rotate(180deg);
-}
-.options{
-  position: absolute;
-  top: 45px;
-  width: 100%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-  transform: translateY(-20px);
-  z-index: -1;
-  opacity: 0;
-  height: 0;
-  transition: .3s;
-}
-.optionsActive{
-  height: auto;
-  transform: translateY(0);
-  z-index: 2;
-  opacity: 1;
-}
-.option{
-  background-color: #fff;
-  color: $color-dark-blue;
+  margin-top: 5px;
   font-size: 18px;
-  font-weight: 400;
-  padding: 10px 0 10px 10px;
-  cursor: pointer;
+  font-weight: 300;
   transition: .3s;
+}
+.messageInfo{
+  color: $color-dark-blue;
   margin: 0;
+  margin-top: 5px;
+  font-size: 16px;
+  max-width: 220px;
+  font-weight: 300;
 }
-.option:hover{
-  background-color: $color-light-blue;
+.inactive{
+  border-color: $color-grey;
+  color: $color-grey;
+  pointer-events: none;
 }
-.optionSelected{
-  background-color: $color-light-blue;
+.label{
+  font-size: 18px;
+  margin: 15px 0 5px 0;
+  color: $color-dark-blue;
 }

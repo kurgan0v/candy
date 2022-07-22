@@ -1,38 +1,33 @@
 import React, {useState} from "react";
 import style from './style.module.scss';
-import arrowDown from '../../assets/img/icons/arrow_down.svg';
 import clsx from "clsx";
 
-interface ISelect {
-    value: IOption,
-    setValue: React.Dispatch<React.SetStateAction<IOption>>
-    children: React.ReactNode[],
+interface IInput {
+    onlyNumbers:boolean,
+    active: boolean,
+    value: number,
+    setValue: React.Dispatch<React.SetStateAction<number>>,
+    messageInfo: string,
+    label: string
 }
-interface IOption {
-    value: string,
-    label: string,
-}
-
-export const Select = ({value, setValue, children}: ISelect) => {
-    const [opened, setOpened] = useState<boolean>(false);
+export const Input = ({onlyNumbers, active, value, setValue, messageInfo, label}:IInput) => {
+    const [message, setMessage] = useState('');
+    const onChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
+        if(Number.isInteger(+e.target.value)){
+            setValue(+e.target.value);
+        } else {
+            setMessage("Введите целое число!");
+            setTimeout(()=>{
+                setMessage("");
+            }, 2000);
+        }
+    }
     return (
-        <div className={style.select} onClick={()=>{setOpened(!opened)}}>
-            <div className={style.selected}>
-                <p className={style.selectedLabel}>{value.label}</p>
-                <img className={clsx(style.selectedIcon, opened && style.selectedIconActive)} src={arrowDown} alt="стрелка вниз"/>
-            </div>
-            <div onClick={()=>{setOpened(false)}} className={clsx(style.options, opened && style.optionsActive)}>
-                {children.map((e:React.ReactNode, i) => {
-                    if(React.isValidElement(e)){
-                        return <p className={clsx(style.option, e.props.value === value.value && style.optionSelected)} key={i} onClick={()=>{setValue({value: e.props.value, label: e.props.label})}}>{e.props.label}</p>;
-                    }
-                })}
-            </div>
+        <div>
+            <p className={style.label}>{label}</p>
+            <input type="text" placeholder="100" onChange={onChange} value={value} className={clsx(style.input, !active && style.inactive)}/>
+            <p className={style.messageInfo}>{messageInfo}</p>
+            <p className={style.message}>{message}</p>
         </div>
-    )
-}
-export const Option = ({value, label}:IOption) => {
-    return(
-        <></>
     )
 }

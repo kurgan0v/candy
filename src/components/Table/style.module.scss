@@ -19,7 +19,7 @@
 th{
   font-size: 18px;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 10px;
   color: $color-dark-blue;
 }
 th:last-of-type, td:last-of-type{
@@ -27,7 +27,8 @@ th:last-of-type, td:last-of-type{
 }
 td{
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px;
   color: $color-dark-blue;
   font-size: 18px;
+  width: 140px;
 }

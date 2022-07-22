@@ -1,95 +1,66 @@
 @import "../../styles/variables.scss";
-.h1{
-  font-size: 30px;
-  color: $color-dark-blue;
-  font-weight: 900;
+.select{
+  position: relative;
+  width: max-content;
 }
-header{
-  background-color: $color-dark-blue;
-}
-.nav{
+.selected{
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-  align-items: center;
-}
-.wrapNav{
-  display: flex;
-  align-items: center;
-}
-.avatar{
-  width: 60px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.userInfo{
-  display: flex;
-  flex-direction: column;
-}
-.userName{
-  font-size: 25px;
-  font-weight: 700;
-  margin: 0;
-  color: #fff;
-}
-.userPosition{
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
-  color: #fff;
-}
-.logout{
-  font-size: 20px;
   padding: 5px 10px;
-  font-weight: 700;
-  background-color: $color-dark-blue;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  height: min-content;
-  transition: .3s;
-  cursor: pointer;
-}
-.logout:hover{
-  color: $color-dark-blue;
-  background-color: #fff;
-}
-
-.navigate{
-  width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-.pages{
-  display: flex;
-}
-.link{
-  text-decoration: none;
-}
-.page{
-  font-size: 25px;
-  font-weight: 700;
-  color: $color-dark-blue;
-  border-radius: 5px;
-  width: 200px;
-  text-align: center;
-  padding: 10px 0;
-  margin-right: 10px;
-  transition: .3s;
   border: 2px solid $color-dark-blue;
+  width: max-content;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 2;
+  min-width: 200px;
   cursor: pointer;
 }
-.page:hover{
-  background-color: $color-light-orange;
-  border: 2px solid $color-orange;
+.selectedLabel{
+  font-size: 20px;
+  color: $color-dark-blue;
+  margin: 0;
+  font-weight: 500;
 }
-.pageActive{
-  border: 2px solid $color-orange;
-  background-color: $color-orange;
+.selectedIcon{
+  width: 20px;
+  transition: .3s;
+  margin-left: 10px;
 }
-.pageActive:hover{
-  background-color: $color-dark-orange;
-  border: 2px solid $color-dark-orange;
+.selectedIconActive{
+  transform: rotate(180deg);
+}
+.options{
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  transform: translateY(-20px);
+  z-index: -1;
+  opacity: 0;
+  height: 0;
+  transition: .3s;
+}
+.optionsActive{
+  height: auto;
+  transform: translateY(0);
+  z-index: 2;
+  opacity: 1;
+}
+.option{
+  background-color: #fff;
+  color: $color-dark-blue;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 0 10px 10px;
+  cursor: pointer;
+  transition: .3s;
+  margin: 0;
+}
+.option:hover{
+  background-color: $color-light-blue;
+}
+.optionSelected{
+  background-color: $color-light-blue;
 }

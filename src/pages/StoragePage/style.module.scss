@@ -53,3 +53,29 @@
   color: $color-red;
   border-color: $color-red;
 }
+.label{
+  font-size: 18px;
+  margin: 15px 0 5px 0;
+  color: $color-dark-blue;
+}
+.headerModal{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  color: $color-dark-blue;
+}
+.price{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-dark-blue;
+  transition: .3s;
+}
+.price:last-of-type{
+  margin-bottom: 20px;
+}
+.warning{
+  color: $color-red;
+  font-size: 18px;
+  margin: 5px 0;
+}
