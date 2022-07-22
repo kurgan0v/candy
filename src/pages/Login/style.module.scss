@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+.main{
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+.info{
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+.total{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  color: $color-dark-blue;
+  margin-left: 20px;
+}
+th{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: $color-dark-blue;
+}
+th:last-of-type{
+  font-weight: 700;
+}
+td{
+  text-align: center;
+  padding: 10px 20px;
+
+  font-size: 18px;
+}

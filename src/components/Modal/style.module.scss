@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+.button{
+  font-weight: 900;
+  font-size: 20px;
+  color: $color-dark-blue;
+  background-color: $color-grey;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  pointer-events: none;
+}
+.button:hover{
+  background-color: $color-grey;
+}
+.active{
+  background-color: $color-orange;
+  pointer-events: all;
+}
+.active:hover{
+  background-color: $color-dark-orange;
+}
